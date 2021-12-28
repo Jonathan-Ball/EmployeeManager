@@ -35,8 +35,8 @@
             this.lblEntryDate = new System.Windows.Forms.Label();
             this.lblJobRole = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cbJobRole = new System.Windows.Forms.ComboBox();
+            this.dtpEntryDate = new System.Windows.Forms.DateTimePicker();
+            this.cboJobRole = new System.Windows.Forms.ComboBox();
             this.chkIsCoffeeDrinker = new System.Windows.Forms.CheckBox();
             this.pnlMainArea = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
@@ -107,24 +107,25 @@
             this.txtFirstName.Size = new System.Drawing.Size(249, 31);
             this.txtFirstName.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // dtpEntryDate
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtpEntryDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(63, 186);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(249, 31);
-            this.dateTimePicker1.TabIndex = 4;
+            this.dtpEntryDate.Location = new System.Drawing.Point(63, 186);
+            this.dtpEntryDate.Name = "dtpEntryDate";
+            this.dtpEntryDate.Size = new System.Drawing.Size(249, 31);
+            this.dtpEntryDate.TabIndex = 4;
             // 
-            // cbJobRole
+            // cboJobRole
             // 
-            this.cbJobRole.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cboJobRole.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbJobRole.FormattingEnabled = true;
-            this.cbJobRole.Location = new System.Drawing.Point(63, 287);
-            this.cbJobRole.Name = "cbJobRole";
-            this.cbJobRole.Size = new System.Drawing.Size(249, 31);
-            this.cbJobRole.TabIndex = 5;
+            this.cboJobRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboJobRole.FormattingEnabled = true;
+            this.cboJobRole.Location = new System.Drawing.Point(63, 287);
+            this.cboJobRole.Name = "cboJobRole";
+            this.cboJobRole.Size = new System.Drawing.Size(249, 31);
+            this.cboJobRole.TabIndex = 5;
             // 
             // chkIsCoffeeDrinker
             // 
@@ -140,8 +141,8 @@
             // 
             this.pnlMainArea.Controls.Add(this.btnSave);
             this.pnlMainArea.Controls.Add(this.chkIsCoffeeDrinker);
-            this.pnlMainArea.Controls.Add(this.cbJobRole);
-            this.pnlMainArea.Controls.Add(this.dateTimePicker1);
+            this.pnlMainArea.Controls.Add(this.cboJobRole);
+            this.pnlMainArea.Controls.Add(this.dtpEntryDate);
             this.pnlMainArea.Controls.Add(this.txtFirstName);
             this.pnlMainArea.Controls.Add(this.lblJobRole);
             this.pnlMainArea.Controls.Add(this.lblEntryDate);
@@ -161,6 +162,7 @@
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // pnlNavigation
             // 
@@ -203,6 +205,7 @@
             this.btnRefresh.TabIndex = 0;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // MainForm
             // 
@@ -235,8 +238,8 @@
         private Label lblEntryDate;
         private Label lblJobRole;
         private TextBox txtFirstName;
-        private DateTimePicker dateTimePicker1;
-        private ComboBox cbJobRole;
+        private DateTimePicker dtpEntryDate;
+        private ComboBox cboJobRole;
         private CheckBox chkIsCoffeeDrinker;
         private Panel pnlMainArea;
         private Button btnSave;

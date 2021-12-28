@@ -8,10 +8,10 @@ namespace EmployeeManager.ViewModel.Command
         private readonly Action _execute;
         private readonly Func<bool> _canExecute;
 
-        public DelegateCommand(Action execute, Func<bool> _canExecute = null)
+        public DelegateCommand(Action execute, Func<bool> canExecute = null)
         {
             this._execute = execute ?? throw new ArgumentNullException(nameof(execute));
-            this._canExecute = _canExecute;
+            this._canExecute = canExecute;
         }
         public event EventHandler? CanExecuteChanged;
         public void RaiseCanExecuteChanged()
